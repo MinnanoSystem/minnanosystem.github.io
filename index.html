@@ -30,8 +30,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
+  <link href="/static/fonts/remixicon/remixicon.css" rel="stylesheet">
+  
   <!-- css -->
   <link rel="stylesheet" href="/static/css/vendor/slick/slick.css">
   <link rel="stylesheet" href="/static/css/vendor/slick/slick-theme.css">
@@ -46,7 +46,7 @@
   <header>
     <div class="content-wrapper">
       <h1><img src="/static/images/logo.svg"></h1>
-      <nav>
+      <nav class="pc">
         <ul>
           <li><a href="#service">みんなのシステムとは？</a></li>
           <li><a href="#works">実績</a></li>
@@ -56,10 +56,29 @@
           <li><a href="#" class="button_contact">お問い合わせ</a></li>
         </ul>
       </nav>
+      <nav class="sp">
+        <ul>
+          <li><button type="button"><i class="ri-menu-line"></i></button></li>
+        </ul>
+      </nav>
+      <div class="drawer">
+        <div class="drawer-header">
+          <button type="button"><i class="ri-close-line"></i></button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#works">実績</a></li>
+            <li><a href="#voice">利用者の声</a></li>
+            <li><a href="#flow">ご利用方法</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#" class="button_contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main>
-    <div id="hero"><img src="/static/images/top-hero.png"></div>
+    <div id="hero"></div>
     <section id="service">
       <div class="content-wrapper">
         <h2>SERVICE<span>サービス</span></h2>
@@ -100,10 +119,12 @@
       </div>
     </section>  
     <section id="works">
+      <div class="content-wrapper">
         <h2>WORKS<span>実績</span></h2>
-        <img src="/static/images/top-works.png">
-        <div class="content-wrapper">
-          <ul>
+      </div>
+      <div class="visual"></div>
+      <div class="content-wrapper">
+        <ul>
           <li><span class="count count-a">80</span>団体</li>
           <li><span class="count count-b">400</span>案件</li>
         </ul>
@@ -263,6 +284,15 @@
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
       });
+      $('header .sp button').click(function(){
+        $('.drawer').show();
+      })
+      $('.drawer button').click(function(){
+        $('.drawer').hide();
+      })
+      $('.drawer nav a').click(function(){
+        $('.drawer').hide();
+      })
     })
   </script>
 </body>

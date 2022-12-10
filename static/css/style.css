@@ -33,6 +33,7 @@ body {
 }
 
 main{
+  overflow: hidden;
 }
 
 .content-wrapper{
@@ -63,6 +64,24 @@ section h2 span{
   color: #ffffff;
 }
 
+@media screen and (max-width: 12000px) {
+  .content-wrapper{
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  section{
+    padding: 80px 0;
+  }
+  section h2{
+    font-size: 32px;
+    margin-bottom: 80px;
+  }
+  section h2 span{
+    font-size: 14px;
+  }
+}
+
 /* ヘッダー
 ---------------------------------*/
 header{
@@ -80,7 +99,7 @@ header .content-wrapper{
   justify-content: space-between;
   align-items: center;
 }
-header nav ul{
+header .content-wrapper > nav ul{
   display: flex;
   gap: 20px;
   align-items: center;
@@ -100,6 +119,58 @@ header .button_contact{
   font-size: 14px;
   color: #ffffff;
   margin-left: 30px;
+}
+header .sp{
+  display: none;
+}
+header .sp button{
+  display: none;
+  font-size: 24px;
+  display: flex;
+}
+header .drawer{
+  display: none;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  padding: 0 16px 120px 16px;
+  box-sizing: border-box;
+}
+header .drawer .drawer-header{
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+header .drawer .drawer-header button{
+  font-size: 24px;
+}
+header .drawer nav ul li{
+  padding-bottom: 20px;
+}
+header .drawer .button_contact{
+  margin-left: 0;
+}
+@media screen and (max-width: 1000px) {
+  header{
+    height: 60px;
+  }
+  header .drawer .drawer-header{
+    height: 60px;
+  }
+  header h1 img{
+    height: 45px;
+  }
+  header .pc{
+    display: none;
+  }
+  header .sp{
+    display: block;
+  }
 }
 
 /* フッター
@@ -133,11 +204,31 @@ footer nav ul li a{
 footer .copy{
   text-align: center;
 }
+@media screen and (max-width: 1000px) {
+  footer .content-wrapper{
+    display: block;
+  }
+  footer img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 60px;
+  }
+  footer nav{
+    display: block;
+  }
+  footer nav ul:first-of-type{
+    margin-bottom: 20px;
+  }
+}
 
 /* ヒーロー
 ---------------------------------*/
-#hero img{
-  vertical-align: top;
+#hero{
+  min-height: 300px;
+  height: calc(100vw * 0.6);;
+  background: url(/static/images/top-hero.png) top center no-repeat;
+  background-size: cover;
+  max-height: 800px;
 }
 
 /* サービス
@@ -209,12 +300,26 @@ footer .copy{
 #service ul li:nth-of-type(4) .icon{
   background: #FFA600;
 }
+@media screen and (max-width: 700px) {
+  #service ul{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 
 /* 実績
 ---------------------------------*/
 
 #works{
   background: radial-gradient(101.56% 140.39% at 0% 2.5%, rgba(0, 63, 92, 0.3) 0%, rgba(69, 64, 85, 0.223438) 24.48%, rgba(188, 80, 144, 0.136634) 52.6%, rgba(255, 99, 97, 0.0884105) 77.6%, rgba(255, 166, 0, 0) 100%);
+}
+#works .visual{
+  min-height: 300px;
+  height: calc(100vw * 0.6);;
+  background: url(/static/images/top-works.png) top center no-repeat;
+  background-size: cover;
+  max-height: 550px;
+
 }
 #works ul{
   display: flex;
@@ -237,6 +342,14 @@ footer .copy{
 #works ul li .count.count-b{
   color: #FFA600;
 }
+@media screen and (max-width: 700px) {
+  #works ul{
+    display: block;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+}
+
 
 /* 利用者の声
 ---------------------------------*/
@@ -283,6 +396,11 @@ footer .copy{
   font-weight: 400;
   font-size: 16px;
   line-height: 200%;
+}
+@media screen and (max-width: 480px) {
+  .voice{
+    width: 300px;
+  }
 }
 
 /* ご利用方法
@@ -338,8 +456,16 @@ footer .copy{
 #flow ul li:nth-of-type(4) .icon{
   background: #FF6361;
 }
+@media screen and (max-width: 900px) {
+  #flow ul{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 
-/* サービス
+  }
+}
+
+
+/* よくある質問
 ---------------------------------*/
 
 #faq{
@@ -395,6 +521,30 @@ footer .copy{
   font-weight: 700;
   font-size: 24px;
   line-height: 150%;
+}
+@media screen and (max-width: 480px) {
+  #faq dl dt{
+    padding-bottom: 20px;
+    font-size: 16px;
+    padding-left: 50px;
+  }
+  #faq dl dt::before{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  #faq dl dd{
+    padding-bottom: 20px;
+    font-size: 16px;
+    padding-left: 50px;
+  }
+  #faq dl dd::before{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+
 }
 
 /* オーバライド
