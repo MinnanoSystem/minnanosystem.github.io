@@ -6,7 +6,6 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/static/css/style.css">
   <link rel="apple-touch-icon" sizes="57x57" href="/static/icons//apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/static/icons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/static/icons/apple-icon-72x72.png">
@@ -24,16 +23,248 @@
   <meta name="msapplication-TileColor" content="#D2C9F0">
   <meta name="msapplication-TileImage" content="/static/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#D2C9F0">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/static/css/vendor/slick/slick.css">
+  <link rel="stylesheet" href="/static/css/vendor/slick/slick-theme.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/static/js/vendor/slick/slick.min.js"></script>
 </head>
 
 <body>
+  <header>
+    <div class="content-wrapper">
+      <h1><img src="/static/images/logo.svg"></h1>
+      <nav>
+        <ul>
+          <li><a href="#service">みんなのシステムとは？</a></li>
+          <li><a href="#works">実績</a></li>
+          <li><a href="#voice">利用者の声</a></li>
+          <li><a href="#flow">ご利用方法</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" class="button_contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
-  <header><img src="/static/images/logo-isometric.svg" /></header>
-  <section>
-    <img src="static/images/logo-text.svg" />
-  </section>
-  <footer>工事中</footer>
+    <div id="hero"><img src="/static/images/top-hero.png"></div>
+    <section id="service">
+      <div class="content-wrapper">
+        <h2>SERVICE<span>サービス</span></h2>
+        <ul>
+          <li>
+            <span class="icon"><i class="ri-global-line"></i></span>
+            <p class="title">ホームページ作成</p>
+            <p class="desc">
+              団体の活動内容や解決したい問題を公開し、ファンや支援者を集めることができます
+              団体の活動内容や解決したい問題を公開し、ファンや支援者を集めることができます
+            </p>
+          </li>
+          <li>
+            <span class="icon"><i class="ri-mail-add-line"></i></span>
+            <p class="title">メールアドレス作成</p>
+            <p class="desc">
+              団体専用のメールアドレスを用意することによって信頼性が高くなります
+              団体専用のメールアドレスを用意することによって信頼性が高くなります
+            </p>
+          </li>
+          <li>
+            <span class="icon"><i class="ri-window-fill"></i></span>
+            <p class="title">寄付ページ作成</p>
+            <p class="desc">
+              支援者から寄付やクラウドソーシングを可能にするためのページを作成します
+              支援者から寄付やクラウドソーシングを可能にするためのページを作成します
+            </p>
+          </li>
+          <li>
+            <span class="icon"><i class="ri-computer-line"></i></span>
+            <p class="title">システム開発</p>
+            <p class="desc">
+              事業を実現するために必要なアプリやシステムを開発します
+              事業を実現するために必要なアプリやシステムを開発します
+              事業を実現するために必要なアプリやシステムを開発します</p>
+          </li>
+        </ul>
+      </div>
+    </section>  
+    <section id="works">
+        <h2>WORKS<span>実績</span></h2>
+        <img src="/static/images/top-works.png">
+        <div class="content-wrapper">
+          <ul>
+          <li><span class="count count-a">80</span>団体</li>
+          <li><span class="count count-b">400</span>案件</li>
+        </ul>
+      </div>
+    </section>  
+    <section id="voice">
+      <div class="content-wrapper">
+        <h2>VOICE<span>利用者の声</span></h2>
+        <ul class="slider">
+          <li>
+            <div class="voice">
+              <div class="header header-a">
+                <p class="icon"><img src="/static/images/avatar-sample.png"></p>
+                <div class="profile">
+                  <p class="companyName">NPO法人 サンプル</p>
+                  <p class="name">代表 前田禄貴様</p>
+                </div>
+              </div>
+              <div class="content">
+                お申し込みから1週間以内に寄付が入るようになりました！お申し込みから1週間以内に寄付が入るようになりました！
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="voice">
+              <div class="header header-b">
+                <p class="icon"><img src="/static/images/avatar-sample.png"></p>
+                <div class="profile">
+                  <p class="companyName">NPO法人 サンプル</p>
+                  <p class="name">代表 前田禄貴様</p>
+                </div>
+              </div>
+              <div class="content">
+                お申し込みから1週間以内に寄付が入るようになりました！お申し込みから1週間以内に寄付が入るようになりました！
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="voice">
+              <div class="header header-c">
+                <p class="icon"><img src="/static/images/avatar-sample.png"></p>
+                <div class="profile">
+                  <p class="companyName">NPO法人 サンプル</p>
+                  <p class="name">代表 前田禄貴様</p>
+                </div>
+              </div>
+              <div class="content">
+                お申し込みから1週間以内に寄付が入るようになりました！お申し込みから1週間以内に寄付が入るようになりました！
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>  
+    <section id="flow">
+      <div class="content-wrapper">
+        <h2>FLOW<span>ご利用方法</span></h2>
+        <ul>
+          <li>
+            <p class="icon"><i class="ri-mail-send-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>お問い合せ</dt>
+                <dd>まずはお気軽に連絡</dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <p class="icon"><i class="ri-question-answer-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>ミーティング</dt>
+                <dd>Zoomなどで詳細を教えてください</dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <p class="icon"><i class="ri-service-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>提案＆合意</dt>
+                <dd>合意いただけるまで選択肢を提案します</dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <p class="icon"><i class="ri-gift-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>納品</dt>
+                <dd>合意いただいた内容を納品します</dd>
+              </dl>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>  
+    <section id="faq">
+      <div class="content-wrapper">
+        <h2>FAQ<span>よくある質問</span></h2>
+        <dl>
+          <dt>
+            納品までどの程度の時間がかかりますか？
+          </dt>
+          <dd>
+            みんなのシステムと提携しているプロボノエンジニアやコンサルタントの都合やご依頼内容次第ですが、プロボノでの作業となりますので多少お時間がかかることもあります。
+            お急ぎの場合は、有料のサービスを紹介させていただくことも可能です。
+          </dd>
+          <dt>
+            納品までどの程度の時間がかかりますか？
+          </dt>
+          <dd>
+            みんなのシステムと提携しているプロボノエンジニアやコンサルタントの都合やご依頼内容次第ですが、プロボノでの作業となりますので多少お時間がかかることもあります。
+            お急ぎの場合は、有料のサービスを紹介させていただくことも可能です。
+          </dd>
+          <dt>
+            納品までどの程度の時間がかかりますか？
+          </dt>
+          <dd>
+            みんなのシステムと提携しているプロボノエンジニアやコンサルタントの都合やご依頼内容次第ですが、プロボノでの作業となりますので多少お時間がかかることもあります。
+            お急ぎの場合は、有料のサービスを紹介させていただくことも可能です。
+          </dd>
+        </dl>
+      </div>
+    </section>  
   </main>
+  <footer>
+    <div class="content-wrapper">
+      <img src="/static/images/logo.svg">
+      <nav>
+        <ul>
+          <li><a href="#service">みんなのシステムとは？</a></li>
+          <li><a href="#works">実績</a></li>
+          <li><a href="#voice">利用者の声</a></li>
+        </ul>
+        <ul>
+          <li><a href="#flow">ご利用方法</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copy">Copyright © みんなのシステム. All Rights Reserved.</p>
+  </footer>
+  <script>
+    $(function(){
+      $('.slider').slick({
+        variableWidth: true,
+        dots: true,
+        prevArrow: '<button type="button" class="slick-prev"><i class="ri-arrow-left-s-line"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="ri-arrow-right-s-line"></i></button>',
+      });
+      $('a').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    })
+  </script>
 </body>
 
 </html>
