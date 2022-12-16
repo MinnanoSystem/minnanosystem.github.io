@@ -58,7 +58,8 @@
       </nav>
       <nav class="sp">
         <ul>
-          <li><button type="button"><i class="ri-menu-line"></i></button></li>
+          <li><button type="button" class="contact"><i class="ri-mail-send-line"></i><span>お問い合わせ</span></button></li>
+          <li><button type="button" class="menu"><i class="ri-menu-line"></i></button></li>
         </ul>
       </nav>
       <div class="drawer">
@@ -78,7 +79,11 @@
     </div>
   </header>
   <main>
-    <div id="hero"></div>
+    <div id="hero">
+      <h2>みんなで笑顔をつくる<br>
+        みんなのシステム</h2>
+      <!-- <img src="/static/images/top-hero.png"> -->
+    </div>
     <section id="service">
       <div class="content-wrapper">
         <h2>SERVICE<span>サービス</span></h2>
@@ -285,7 +290,7 @@
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
       });
-      $('header .sp button').click(function(){
+      $('header .sp button.menu').click(function(){
         $('.drawer').show();
       })
       $('.drawer button').click(function(){

@@ -34,6 +34,12 @@ body {
 
 main{
   overflow: hidden;
+  padding-top: 75px;
+}
+@media screen and (max-width: 1000px) {
+  main{
+    padding-top: 60px;
+  }
 }
 
 .content-wrapper{
@@ -88,6 +94,14 @@ header{
   height: 75px;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: saturate(180%) blur(5px);
+  background: hsla(0,0%,100%,.8);
+  z-index: 2;
+
 }
 header h1{
   display: flex;
@@ -111,7 +125,7 @@ header nav ul li a{
   display: inline-block;
 }
 header .button_contact{
-  background: #ED828B;
+  background: #FF6361;
   border-radius: 10px;
   display: block;
   padding: 8px 22px;
@@ -127,7 +141,30 @@ header .sp button{
   display: none;
   font-size: 24px;
   display: flex;
+  height: 60px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
 }
+header .sp button.contact{
+  background: #FF6361;
+  color: #ffffff;
+  flex-flow: column;
+}
+header .sp button.contact i{
+  color: #ffffff;
+}
+header .sp button.contact span{
+  color: #ffffff;
+  font-size: 10px;
+}
+header .sp ul{
+  gap: 0!important;
+}
+header .sp ul li{
+  height: 60px;
+}
+
 header .drawer{
   display: none;
   background: #ffffff;
@@ -136,7 +173,7 @@ header .drawer{
   right: 0;
   width: 100%;
   max-width: 500px;
-  height: 100%;
+  height: 100vh;
   padding: 0 16px 120px 16px;
   box-sizing: border-box;
 }
@@ -158,6 +195,9 @@ header .drawer .button_contact{
 @media screen and (max-width: 1000px) {
   header{
     height: 60px;
+  }
+  header .content-wrapper{
+    padding-right: 0;
   }
   header .drawer .drawer-header{
     height: 60px;
@@ -226,9 +266,39 @@ footer .copy{
 #hero{
   min-height: 300px;
   height: calc(100vw * 0.6);;
-  background: url(/static/images/top-hero.png) top center no-repeat;
+  background: url(/static/images/top-hero.png) center center no-repeat;
   background-size: cover;
   max-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero h2{
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+  color: #ffffff;
+  text-shadow: 0px 0px 20px #000000;
+}
+#hero img{
+  width: 100%;
+  vertical-align: top;
+}
+@media screen and (max-width: 1200px) {
+  #hero h2{
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #hero h2{
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #hero h2{
+    font-size: 30px;
+    line-height: 150%;
+  }
 }
 
 /* サービス
