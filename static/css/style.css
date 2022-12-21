@@ -274,11 +274,6 @@ footer .copy{
   align-items: center;
 }
 #hero h2{
-  font-weight: 400;
-  font-size: 100px;
-  line-height: 100px;
-  color: #ffffff;
-  text-shadow: 0px 0px 20px #000000;
 }
 #hero img{
   width: 100%;
@@ -286,18 +281,7 @@ footer .copy{
 }
 @media screen and (max-width: 1200px) {
   #hero h2{
-    font-size: 80px;
-  }
-}
-@media screen and (max-width: 900px) {
-  #hero h2{
-    font-size: 60px;
-  }
-}
-@media screen and (max-width: 750px) {
-  #hero h2{
-    font-size: 30px;
-    line-height: 150%;
+    padding: 0 20px;
   }
 }
 
@@ -383,13 +367,8 @@ footer .copy{
 #works{
   background: radial-gradient(101.56% 140.39% at 0% 2.5%, rgba(0, 63, 92, 0.3) 0%, rgba(69, 64, 85, 0.223438) 24.48%, rgba(188, 80, 144, 0.136634) 52.6%, rgba(255, 99, 97, 0.0884105) 77.6%, rgba(255, 166, 0, 0) 100%);
 }
-#works .visual{
-  min-height: 300px;
-  height: calc(100vw * 0.6);;
-  background: url(/static/images/top-works.png) top center no-repeat;
-  background-size: cover;
-  max-height: 550px;
-
+#works .visual img{
+  width: 100%;
 }
 #works ul{
   display: flex;
@@ -414,9 +393,12 @@ footer .copy{
 }
 @media screen and (max-width: 700px) {
   #works ul{
-    display: block;
+    gap: 30px;
     margin: 40px auto 0;
     text-align: center;
+  }
+  #works ul li .count{
+    font-size: 60px;
   }
 }
 
@@ -441,14 +423,20 @@ footer .copy{
   gap: 20px;
   border-radius: 20px 20px 0 0;
 }
-.voice .header.header-a{
+#voice .slider li:nth-child(1) .voice .header{
   background: #FF6361;
 }
-.voice .header.header-b{
+#voice .slider li:nth-child(2) .voice .header{
   background: #FFA600;
 }
-.voice .header.header-c{
+#voice .slider li:nth-child(3) .voice .header{
   background: #003F5C;
+}
+#voice .slider li:nth-child(4) .voice .header{
+  background: #454055;
+}
+#voice .slider li:nth-child(5) .voice .header{
+  background: #BC5090;
 }
 .voice .profile .companyName{
   font-weight: 700;
@@ -622,7 +610,7 @@ footer .copy{
 
 /* slick */
 .slick-dots{
-  width: 150px;
+  width: 270px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -648,10 +636,10 @@ footer .copy{
   height: 32px;
 }
 .slick-next{
-  transform: translate(140px, 0);
+  transform: translate(160px, 0);
 }
 .slick-prev{
-  transform: translate(-140px, 0);
+  transform: translate(-160px, 0);
 }
 .slick-prev:before, .slick-next:before {
   content: "";
