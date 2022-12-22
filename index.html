@@ -276,7 +276,39 @@
           </dd>
         </dl>
       </div>
-    </section>  
+    </section>
+    <section id="contact">
+      <div class="content-wrapper">
+        <h2>CONTACT<span>お問い合わせ</span></h2>
+        <form action="https://minnanosystem.npkn.net/contact/" method="POST">
+        <dl>
+          <dt>お名前</dt>
+          <dd class="input_name">
+            <input type="text" name="name">
+            <p></p>
+          </dd>
+          <dt>会社・団体名</dt>
+          <dd class="input_company_name">
+            <input type="text" name="company_name">
+            <p></p>
+          </dd>
+          <dt>メールアドレス</dt>
+          <dd class="input_email">
+            <input type="text" name="email">
+            <p></p>
+          </dd>
+          <dt>お問い合わせ内容</dt>
+          <dd class="input_content">
+            <textarea rows="5" name="content"></textarea>
+            <p></p>
+          </dd>
+        </dl>
+        <div class="contact-captcha"></div>
+        <div class="contact-submit">
+          <input type="button" value="送信">
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="content-wrapper">
@@ -321,6 +353,51 @@
       $('.drawer nav a').click(function(){
         $('.drawer').hide();
       })
+      $('#contact input[type=button]').click(function(){
+        console.log('a');
+        var form = $('#contact form');
+        var url = form.attr('action');
+        var method = form.attr('method');
+
+        clear();
+
+        $.ajax({
+          url: url,
+          type: method,
+          data: form.serialize(),
+          dataType: 'json'
+        }).done(function(data) {
+          console.log(data);
+        }).fail(function(data){
+          var json = data.responseJSON;
+          if ('name' in json) {
+            error('name', json.name);
+          }
+          if ('company_name' in json) {
+            error('company_name', json.company_name);
+          }
+          if ('email' in json) {
+            error('email', json.email);
+          }
+          if ('content' in json) {
+            error('content', json.content);
+          }
+        });
+      })
+
+      function error(inputName, message){
+        $('.input_'+inputName+' input').addClass('error');
+        $('.input_'+inputName+' textarea').addClass('error');
+        $('.input_'+inputName+' p').html(message);
+        $('.input_'+inputName+' p').show();
+      }
+      function clear(){
+        $('form dd input').removeClass('error');
+        $('form dd textarea').removeClass('error');
+        $('form dd p').html("");
+        $('form dd p').hide();
+
+      }
     })
   </script>
 </body>

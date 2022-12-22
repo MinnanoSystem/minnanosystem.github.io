@@ -606,6 +606,81 @@ footer .copy{
 
 }
 
+
+/* お問い合わせ
+---------------------------------*/
+
+#contact dl{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+#contact dl dt{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  padding-bottom: 20px;
+}
+#contact dl dd{
+  padding-bottom: 40px;
+}
+
+#contact dl dd input[type=text], #contact dl dd textarea{
+  box-sizing: border-box;
+  width: 100%;
+  background: #F1F1F1;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+#contact dl dd input[type=text].error, #contact dl dd textarea.error{
+  border: 1px solid #FF6361;
+}
+#contact dl dd p{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 20px;
+  color: #FF6361;
+  display: none;
+}
+
+.contact-submit{
+  text-align: center;
+}
+.contact-submit input[type=button]{
+  background: #ED828B;
+  border-radius: 40px;
+  padding: 20px 120px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+  
+}
+
+@media screen and (max-width: 480px) {
+  #contact dl dt{
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  #contact dl dd{
+    padding-bottom: 20px;
+  }
+  #contact dl dd p{
+    font-size: 12px;
+  }
+  #contact dl dd input[type=text], #contact dl dd textarea{
+    font-size: 16px;
+  }
+  .contact-submit input[type=button]{
+    padding: 10px 100px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
 /* オーバライド
 ---------------------------------*/
 
