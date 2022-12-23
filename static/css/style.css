@@ -625,6 +625,9 @@ footer .copy{
 #contact dl dd{
   padding-bottom: 40px;
 }
+#contact dl dd:last-of-type{
+  padding-bottom: 0;
+}
 
 #contact dl dd input[type=text], #contact dl dd textarea{
   box-sizing: border-box;
@@ -657,7 +660,14 @@ footer .copy{
   font-size: 24px;
   line-height: 33px;
   color: #ffffff;
-  
+  cursor: pointer;
+}
+.contact-submit input[type=button]:disabled{
+  background: #D1CACB;
+}
+.contact-captcha{
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 480px) {
