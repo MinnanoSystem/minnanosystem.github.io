@@ -54,12 +54,12 @@
           <li><a href="#voice">利用者の声</a></li>
           <li><a href="#flow">ご利用方法</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#" class="button_contact">お問い合わせ</a></li>
+          <li><a href="#contact" class="button_contact">お問い合わせ</a></li>
         </ul>
       </nav>
       <nav class="sp">
         <ul>
-          <li><button type="button" class="contact"><i class="ri-mail-send-line"></i><span>お問い合わせ</span></button></li>
+          <li><a href="#contact" class="contact"><i class="ri-mail-send-line"></i><span>お問い合わせ</span></a></li>
           <li><button type="button" class="menu"><i class="ri-menu-line"></i></button></li>
         </ul>
       </nav>
@@ -73,7 +73,7 @@
             <li><a href="#voice">利用者の声</a></li>
             <li><a href="#flow">ご利用方法</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#" class="button_contact">お問い合わせ</a></li>
+            <li><a href="#contact" class="button_contact">お問い合わせ</a></li>
           </ul>
         </nav>
       </div>
@@ -309,6 +309,13 @@
             <input type="button" value="送信" disabled>
           </div>
         </form>
+        <div class="success">
+          <p>送信完了しました</p>
+          <span>
+            お問い合わせありがとうございます。<br>
+            内容を確認後、担当者よりご連絡いたします。
+          </span>
+        </div>
       </div>
     </section>
   </main>
@@ -369,7 +376,7 @@
         var url = form.attr('action');
         var method = form.attr('method');
 
-        clear();
+        clearAll();
 
         $.ajax({
           url: url,
@@ -378,6 +385,10 @@
           dataType: 'json'
         }).done(function(data) {
           console.log(data);
+          $('#contact form').hide();
+          $('#contact .success').show();
+          var position = $('#contact').offset().top;
+          $("html, body").animate({scrollTop:position}, 500, "swing");
         }).fail(function(data){
           var json = data.responseJSON;
           if ('name' in json) {
@@ -393,15 +404,79 @@
             error('content', json.content);
           }
         });
+      });
+
+      $('input[name=name]').blur(function(){
+        clear('name');
+        if(!required($(this).val())){
+          error('name', 'お名前が未入力です');
+        }else{
+          pass('name');
+        }
+      })
+      $('input[name=company_name]').blur(function(){
+        clear('company_name');
+        if(!required($(this).val())){
+          error('company_name', '会社・団体名が未入力です');
+        }else{
+          pass('company_name');
+        }
+      })
+      $('input[name=email]').blur(function(){
+        clear('email');
+        if(!required($(this).val())){
+          error('email', 'メールアドレスが未入力です');
+         }else if(!email($(this).val())){
+          error('email', 'メールアドレスをご確認ください');
+        }else{
+          pass('email');
+        }
+      })
+      $('textarea[name=content]').blur(function(){
+        clear('content');
+        if(!required($(this).val())){
+          error('content', 'お問い合わせ内容が未入力です');
+        }else{
+          pass('content');
+        }
       })
 
+      function required(val){
+        if(val == ""){
+          return false;
+        }
+        return true;
+      }
+      function email(val){
+        var regex = /^[a-zA-Z0-9_+-]+(\.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
+        if(!regex.test(val)){
+          return false;
+        }
+        return true;
+      }
+
+      function pass(inputName){
+        $('.input_'+inputName+' input').addClass('pass');
+        $('.input_'+inputName+' textarea').addClass('pass');
+        $('.input_'+inputName+' p').show();
+      }
       function error(inputName, message){
         $('.input_'+inputName+' input').addClass('error');
         $('.input_'+inputName+' textarea').addClass('error');
         $('.input_'+inputName+' p').html(message);
         $('.input_'+inputName+' p').show();
       }
-      function clear(){
+      function clear(inputName){
+        $('.input_'+inputName+' input').removeClass('pass');
+        $('.input_'+inputName+' textarea').removeClass('pass');
+        $('.input_'+inputName+' input').removeClass('error');
+        $('.input_'+inputName+' textarea').removeClass('error');
+        $('.input_'+inputName+' p').html("");
+        $('.input_'+inputName+' p').hide();
+      }
+      function clearAll(){
+        $('form dd input').removeClass('pass');
+        $('form dd textarea').removeClass('pass');
         $('form dd input').removeClass('error');
         $('form dd textarea').removeClass('error');
         $('form dd p').html("");

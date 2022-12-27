@@ -19,6 +19,9 @@ a{
 ul{
   list-style: none;
 }
+button{
+  cursor: pointer;
+}
 
 html, body {
   min-height: 100%;
@@ -137,7 +140,7 @@ header .button_contact{
 header .sp{
   display: none;
 }
-header .sp button{
+header .sp button, header .sp a.contact{
   display: none;
   font-size: 24px;
   display: flex;
@@ -146,15 +149,15 @@ header .sp button{
   justify-content: center;
   align-items: center;
 }
-header .sp button.contact{
+header .sp a.contact{
   background: #FF6361;
   color: #ffffff;
   flex-flow: column;
 }
-header .sp button.contact i{
+header .sp a.contact i{
   color: #ffffff;
 }
-header .sp button.contact span{
+header .sp a.contact span{
   color: #ffffff;
   font-size: 10px;
 }
@@ -191,6 +194,9 @@ header .drawer nav ul li{
 }
 header .drawer .button_contact{
   margin-left: 0;
+  padding: 15px 22px;
+  font-size: 16px;
+  text-align: center;
 }
 @media screen and (max-width: 1000px) {
   header{
@@ -640,6 +646,9 @@ footer .copy{
 #contact dl dd input[type=text].error, #contact dl dd textarea.error{
   border: 1px solid #FF6361;
 }
+#contact dl dd input[type=text].pass, #contact dl dd textarea.pass{
+  border: 1px solid #00892E;
+}
 #contact dl dd p{
   font-weight: 700;
   font-size: 18px;
@@ -647,6 +656,23 @@ footer .copy{
   margin-top: 20px;
   color: #FF6361;
   display: none;
+}
+
+#contact .success{
+  text-align: center;
+  display: none;
+}
+#contact .success p{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #00892E;
+  margin-bottom: 40px;
+}
+#contact .success span{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
 }
 
 .contact-submit{
