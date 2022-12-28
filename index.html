@@ -6,7 +6,6 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/static/css/style.css">
   <link rel="apple-touch-icon" sizes="57x57" href="/static/icons//apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/static/icons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/static/icons/apple-icon-72x72.png">
@@ -24,16 +23,468 @@
   <meta name="msapplication-TileColor" content="#D2C9F0">
   <meta name="msapplication-TileImage" content="/static/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#D2C9F0">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- icons -->
+  <link href="/static/fonts/remixicon/remixicon.css" rel="stylesheet">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="/static/css/vendor/slick/slick.css">
+  <link rel="stylesheet" href="/static/css/vendor/slick/slick-theme.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/static/js/vendor/slick/slick.min.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
 </head>
 
 <body>
+  <header>
+    <div class="content-wrapper">
+      <h1><img src="/static/images/logo.svg"></h1>
+      <nav class="pc">
+        <ul>
+          <li><a href="#service">みんなのシステムとは？</a></li>
+          <li><a href="#works">実績</a></li>
+          <li><a href="#voice">利用者の声</a></li>
+          <li><a href="#flow">ご利用方法</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="button_contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <nav class="sp">
+        <ul>
+          <li><a href="#contact" class="contact"><i class="ri-mail-send-line"></i><span>お問い合わせ</span></a></li>
+          <li><button type="button" class="menu"><i class="ri-menu-line"></i></button></li>
+        </ul>
+      </nav>
+      <div class="drawer">
+        <div class="drawer-header">
+          <button type="button"><i class="ri-close-line"></i></button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#works">実績</a></li>
+            <li><a href="#voice">利用者の声</a></li>
+            <li><a href="#flow">ご利用方法</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="button_contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
   <main>
-  <header><img src="/static/images/logo-isometric.svg" /></header>
-  <section>
-    <img src="static/images/logo-text.svg" />
-  </section>
-  <footer>工事中</footer>
+    <div id="hero">
+      <h2><img src="/static/images/top-hero-copy.png"></h2>
+    </div>
+    <section id="service">
+      <div class="content-wrapper">
+        <h2>SERVICE<span>サービス</span></h2>
+        <ul>
+          <li>
+            <span class="icon"><i class="ri-global-line"></i></span>
+            <p class="title">ホームページ作成</p>
+            <p class="desc">
+              団体の活動内容や解決したい問題を公開し、ファンや支援者を集めることができます
+            </p>
+          </li>
+          <li>
+            <span class="icon"><i class="ri-mail-add-line"></i></span>
+            <p class="title">メールアドレス作成</p>
+            <p class="desc">
+              団体専用のメールアドレスを用意することによって信頼性が高くなります
+            </p>
+          </li>
+          <li>
+            <span class="icon"><i class="ri-window-fill"></i></span>
+            <p class="title">寄付ページ作成</p>
+            <p class="desc">
+              支援者から寄付やクラウドファンディングを可能にするためのページを作成します
+            </p>
+          </li>
+          <li>
+            <span class="icon"><i class="ri-computer-line"></i></span>
+            <p class="title">システム開発</p>
+            <p class="desc">
+              事業を実現するために必要なアプリやシステムを開発します
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>  
+    <section id="works">
+      <div class="content-wrapper">
+        <h2>WORKS<span>実績</span></h2>
+      </div>
+      <div class="visual"><img src="/static/images/top-works.png"></div>
+      <div class="content-wrapper">
+        <ul>
+          <li><span class="count count-a">20</span>団体</li>
+          <li><span class="count count-b">40</span>案件</li>
+        </ul>
+      </div>
+    </section>  
+    <section id="voice">
+      <div class="content-wrapper">
+        <h2>VOICE<span>利用者の声</span></h2>
+        <ul class="slider">
+          <li>
+            <div class="voice">
+              <div class="header">
+                <p class="icon"><img src="/static/images/voice-icon1.png"></p>
+                <div class="profile">
+                  <p class="companyName">NPO法人ShareAlike</p>
+                  <p class="name">理事 綾小路美嘉</p>
+                </div>
+              </div>
+              <div class="content">
+                お申し込みから1週間以内に寄付が入るようになりました！エンジニアの方に感謝です！
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="voice">
+              <div class="header">
+                <p class="icon"><img src="/static/images/voice-icon2.png"></p>
+                <div class="profile">
+                  <p class="companyName">一般社団法人GFDL</p>
+                  <p class="name">理事 佐藤清</p>
+                </div>
+              </div>
+              <div class="content">
+                プロボノでシステムのカスタマイズが可能なんて思ってませんでした。今後も相談もしていきたいです！
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="voice">
+              <div class="header">
+                <p class="icon"><img src="/static/images/voice-icon3.png"></p>
+                <div class="profile">
+                  <p class="companyName">NPO法人ペディア</p>
+                  <p class="name">理事 岡田恵子</p>
+                </div>
+              </div>
+              <div class="content">
+                ボランティアは未経験者が多いので最初は躊躇しましたが、無料でIT・システムのプロの支援が受けられるのは本当に心強いです。
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="voice">
+              <div class="header">
+                <p class="icon"><img src="/static/images/voice-icon4.png"></p>
+                <div class="profile">
+                  <p class="companyName">一般社団法人神戸の野菜</p>
+                  <p class="name">理事 佐藤清</p>
+                </div>
+              </div>
+              <div class="content">
+                ホームページとメールの設定を全てお願いできて安心できました。有料サービスだとかなり高額なので、本当に助かりました！
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="voice">
+              <div class="header">
+                <p class="icon"><img src="/static/images/voice-icon5.png"></p>
+                <div class="profile">
+                  <p class="companyName">NPO法人みんなの車椅子</p>
+                  <p class="name">理事 美輪隆之介</p>
+                </div>
+              </div>
+              <div class="content">
+                非営利弊団体の事業に共感していただくIT専門のパートナーはここだけだと感じました。このプロボノサービスには驚きました！
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>  
+    <section id="flow">
+      <div class="content-wrapper">
+        <h2>FLOW<span>ご利用方法</span></h2>
+        <ul>
+          <li>
+            <p class="icon"><i class="ri-mail-send-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>お問い合せ</dt>
+                <dd>まずはお気軽に連絡</dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <p class="icon"><i class="ri-question-answer-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>ミーティング</dt>
+                <dd>Zoomなどで詳細を教えてください</dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <p class="icon"><i class="ri-service-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>提案＆合意</dt>
+                <dd>合意いただけるまで選択肢を提案します</dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <p class="icon"><i class="ri-gift-line"></i></p>
+            <div class="content">
+              <dl>
+                <dt>納品</dt>
+                <dd>合意いただいた内容を納品します</dd>
+              </dl>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>  
+    <section id="faq">
+      <div class="content-wrapper">
+        <h2>FAQ<span>よくある質問</span></h2>
+        <dl>
+          <dt>
+            すべてプロボノって本当ですか？
+          </dt>
+          <dd>
+            非営利団体からのお申し込みであれば原則プロボノです。サーバー代やライセンスなどはご負担いただきます。<br>
+            営利団体からのお申し込みは有料になります。
+          </dd>
+          <dt>
+            納品までどの程度の時間がかかりますか？
+          </dt>
+          <dd>
+            みんなのシステムと提携しているプロボノエンジニアやコンサルタントの都合やご依頼内容次第ですが、プロボノでの作業となりますので多少お時間がかかることもあります。<br>
+            お急ぎの場合は、有料のサービスを紹介させていただくことも可能です。
+          </dd>
+          <dt>
+            納品後も継続的にご支援いただけますか？
+          </dt>
+          <dd>
+            はい。但し内容によっては継続支援は有料になることがあります。<br>
+            まずはお問合せください。
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="content-wrapper">
+        <h2>CONTACT<span>お問い合わせ</span></h2>
+        <form action="https://minnanosystem.npkn.net/contact/" method="POST">
+          <dl>
+            <dt>お名前</dt>
+            <dd class="input_name">
+              <input type="text" name="name">
+              <p></p>
+            </dd>
+            <dt>会社・団体名</dt>
+            <dd class="input_company_name">
+              <input type="text" name="company_name">
+              <p></p>
+            </dd>
+            <dt>メールアドレス</dt>
+            <dd class="input_email">
+              <input type="text" name="email">
+              <p></p>
+            </dd>
+            <dt>お問い合わせ内容</dt>
+            <dd class="input_content">
+              <textarea rows="5" name="content"></textarea>
+              <p></p>
+            </dd>
+          </dl>
+          <div class="contact-captcha"></div>
+          <div class="contact-submit">
+            <input type="button" value="送信" disabled>
+          </div>
+        </form>
+        <div class="success">
+          <p>送信完了しました</p>
+          <span>
+            お問い合わせありがとうございます。<br>
+            内容を確認後、担当者よりご連絡いたします。
+          </span>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+    <div class="content-wrapper">
+      <img src="/static/images/logo.svg">
+      <nav>
+        <ul>
+          <li><a href="#service">みんなのシステムとは？</a></li>
+          <li><a href="#works">実績</a></li>
+          <li><a href="#voice">利用者の声</a></li>
+        </ul>
+        <ul>
+          <li><a href="#flow">ご利用方法</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copy">Copyright © みんなのシステム. All Rights Reserved.</p>
+  </footer>
+  <script>
+    $(function(){
+      window.onloadTurnstileCallback = function () {
+      turnstile.render('.contact-captcha', {
+          sitekey: '0x4AAAAAAABss30kDgj_426f',
+          callback: function(token) {
+              console.log(`Challenge Success ${token}`);
+              $('.contact-submit input').prop('disabled', false);
+          },
+        });
+      };
+      $('.slider').slick({
+        variableWidth: true,
+        dots: true,
+        infinite: false,
+        prevArrow: '<button type="button" class="slick-prev"><i class="ri-arrow-left-s-line"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="ri-arrow-right-s-line"></i></button>',
+      });
+      $('a').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+      $('header .sp button.menu').click(function(){
+        $('.drawer').show();
+      })
+      $('.drawer button').click(function(){
+        $('.drawer').hide();
+      })
+      $('.drawer nav a').click(function(){
+        $('.drawer').hide();
+      })
+      $('#contact input[type=button]').click(function(){
+        var form = $('#contact form');
+        var url = form.attr('action');
+        var method = form.attr('method');
+
+        clearAll();
+
+        $.ajax({
+          url: url,
+          type: method,
+          data: form.serialize(),
+          dataType: 'json'
+        }).done(function(data) {
+          console.log(data);
+          $('#contact form').hide();
+          $('#contact .success').show();
+          var position = $('#contact').offset().top;
+          $("html, body").animate({scrollTop:position}, 500, "swing");
+        }).fail(function(data){
+          var json = data.responseJSON;
+          if ('name' in json) {
+            error('name', json.name);
+          }
+          if ('company_name' in json) {
+            error('company_name', json.company_name);
+          }
+          if ('email' in json) {
+            error('email', json.email);
+          }
+          if ('content' in json) {
+            error('content', json.content);
+          }
+        });
+      });
+
+      $('input[name=name]').blur(function(){
+        clear('name');
+        if(!required($(this).val())){
+          error('name', 'お名前が未入力です');
+        }else{
+          pass('name');
+        }
+      })
+      $('input[name=company_name]').blur(function(){
+        clear('company_name');
+        if(!required($(this).val())){
+          error('company_name', '会社・団体名が未入力です');
+        }else{
+          pass('company_name');
+        }
+      })
+      $('input[name=email]').blur(function(){
+        clear('email');
+        if(!required($(this).val())){
+          error('email', 'メールアドレスが未入力です');
+         }else if(!email($(this).val())){
+          error('email', 'メールアドレスをご確認ください');
+        }else{
+          pass('email');
+        }
+      })
+      $('textarea[name=content]').blur(function(){
+        clear('content');
+        if(!required($(this).val())){
+          error('content', 'お問い合わせ内容が未入力です');
+        }else{
+          pass('content');
+        }
+      })
+
+      function required(val){
+        if(val == ""){
+          return false;
+        }
+        return true;
+      }
+      function email(val){
+        var regex = /^[a-zA-Z0-9_+-]+(\.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
+        if(!regex.test(val)){
+          return false;
+        }
+        return true;
+      }
+
+      function pass(inputName){
+        $('.input_'+inputName+' input').addClass('pass');
+        $('.input_'+inputName+' textarea').addClass('pass');
+        $('.input_'+inputName+' p').show();
+      }
+      function error(inputName, message){
+        $('.input_'+inputName+' input').addClass('error');
+        $('.input_'+inputName+' textarea').addClass('error');
+        $('.input_'+inputName+' p').html(message);
+        $('.input_'+inputName+' p').show();
+      }
+      function clear(inputName){
+        $('.input_'+inputName+' input').removeClass('pass');
+        $('.input_'+inputName+' textarea').removeClass('pass');
+        $('.input_'+inputName+' input').removeClass('error');
+        $('.input_'+inputName+' textarea').removeClass('error');
+        $('.input_'+inputName+' p').html("");
+        $('.input_'+inputName+' p').hide();
+      }
+      function clearAll(){
+        $('form dd input').removeClass('pass');
+        $('form dd textarea').removeClass('pass');
+        $('form dd input').removeClass('error');
+        $('form dd textarea').removeClass('error');
+        $('form dd p').html("");
+        $('form dd p').hide();
+
+      }
+    })
+  </script>
 </body>
 
 </html>
