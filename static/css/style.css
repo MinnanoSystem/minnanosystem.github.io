@@ -5,11 +5,13 @@
   font-family: 'Zen Maru Gothic';
   font-weight: 400;
   src: url(/static/fonts/google/ZenMaruGothic-Regular.ttf) format('truetype');
+  font-display: swap;
  }
  @font-face {
   font-family: 'Zen Maru Gothic';
   font-weight: 700;
-  src: url(/static/fonts/google/ZenMaruGothic-bold.ttf) format('truetype');
+  src: url(/static/fonts/google/ZenMaruGothic-Bold.ttf) format('truetype');
+  font-display: swap;
  }
 
 

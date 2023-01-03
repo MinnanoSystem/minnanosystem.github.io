@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="/static/css/style.css">
   
   <!-- js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/static/js/vendor/jquery-3.6.3.min.js"></script>
   <script src="/static/js/vendor/slick/slick.min.js"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
 
@@ -353,7 +353,6 @@
           sitekey: '0x4AAAAAAABss30kDgj_426f',
           theme: 'light',
           callback: function(token) {
-              console.log(`Challenge Success ${token}`);
               $('.contact-submit input').prop('disabled', false);
           },
         });
@@ -395,7 +394,6 @@
           data: form.serialize(),
           dataType: 'json'
         }).done(function(data) {
-          console.log(data);
           $('#contact form').hide();
           $('#contact .success').show();
           var position = $('#contact').offset().top;
