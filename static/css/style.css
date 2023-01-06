@@ -552,6 +552,162 @@ footer .copy{
 }
 
 
+/* 求人情報
+---------------------------------*/
+#jobs .message{
+  text-align: center;
+  margin-bottom: 120px;
+}
+#jobs .message p:nth-child(1){
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 200%;
+}
+#jobs .message p:nth-child(2){
+  color: #FF5B00;
+  padding: 60px 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 200%;
+}
+#jobs .message p:nth-child(3){
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 200%;
+}
+#jobs .example{
+  margin-bottom: 120px;
+}
+#jobs .example table{
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+#jobs .example table td{
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 200%;
+}
+#jobs .example table td img{
+  margin: 0 25px;
+}
+#jobs .example table th{
+  color: #555555;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 0 10px 0;
+}
+#jobs .example table thead td:last-child{
+  color: #FF5B00;
+}
+#jobs .example table tbody td:first-child{
+  background: #EAEAEA;
+  padding: 10px 100px;
+}
+#jobs .example table tbody td:last-child{
+  background: #EAEAEA;
+  padding: 10px 100px;
+  color: #FF5B00;
+}
+#jobs .message2{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 200%;
+  margin-bottom: 120px;
+  text-align: center;
+}
+#jobs .message2 br.sp{
+  display: none;
+}
+#jobs .contact{
+  background: #FFE4D6;
+  padding: 60px;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
+}
+#jobs .contact p{
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 200%;
+  color: #FF5B00;
+}
+#jobs .contact span{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;  
+  color: #555555;
+}
+#jobs .contact a{
+  background: #FF8846;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center; 
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 10px 40px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  #jobs .example table{
+    width: 100%;
+  }
+  #jobs .example table td{
+    font-size: 20px;
+  }
+  #jobs .example table th{
+    font-size: 16px;
+  }
+  #jobs .example table tbody td:first-child{
+    background: #EAEAEA;
+    padding: 10px 0;
+  }
+  #jobs .example table tbody td:last-child{
+    background: #EAEAEA;
+    padding: 10px 0;
+    color: #FF5B00;
+  }
+  #jobs .example table td img{
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #jobs .message p:nth-child(1){
+    font-size: 20px;
+  }
+  #jobs .message p:nth-child(2){
+    padding: 60px 0;
+    font-size: 30px;
+  }
+  #jobs .message p:nth-child(3){
+    font-size: 14px;
+  }
+  #jobs .message2{
+    font-size: 24px;
+  }
+  #jobs .message2 br.sp{
+    display: block;
+  }
+  #jobs .contact{
+    padding: 40px;
+  }
+  #jobs .contact p{
+    font-size: 20px;
+  }
+  #jobs .contact span{
+    font-size: 14px;
+  }
+  #jobs .contact a{
+    font-size: 20px;
+  }
+  
+}
+
 /* よくある質問
 ---------------------------------*/
 
