@@ -1,0 +1,28 @@
+name: GitHub Actions Minify
+run-name: ${{ github.actor }} triggered minify action
+on:
+  push:
+    branches:
+      - 'flavio/minify'
+      - '!main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'github-actions' }}
+    steps:
+    - uses: actions/checkout@v3
+    - name: Minify
+      uses: amireshoon/minifyAction@main
+      with:
+        repo: ${{ github.repository }}
+    - name: Copy
+      run: |
+        cp --verbose -R src/* dist/
+    - name: Push
+      run: |
+        git config --local user.email "github-actions@github.com"
+        git config --local user.name "github-actions"
+        git add dist
+        git commit -a -m "Add minified files"
+        git push
