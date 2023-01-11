@@ -267,8 +267,33 @@ footer nav ul li a{
   font-size: 20px;
   display: inline-block;
 }
+footer .about{
+  display: flex;
+  margin-bottom: 120px;
+  max-width: 700px;
+  flex-flow: column;
+  margin: 0 auto 120px;
+  gap: 10px;
+}
+footer .about dl{
+  display: flex;
+  gap: 20px;
+}
+footer .about dl dt{
+  font-weight: 700;
+}
 footer .copy{
   text-align: center;
+}
+@media screen and (max-width: 750px) {
+  footer .about{
+    padding: 0 16px;
+    gap: 20px;
+  }
+  footer .about dl{
+    flex-flow: column;
+    gap: 10px;
+  }
 }
 @media screen and (max-width: 1000px) {
   footer .content-wrapper{
